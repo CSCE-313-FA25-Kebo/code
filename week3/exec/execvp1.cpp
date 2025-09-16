@@ -9,7 +9,8 @@ using namespace std;
 
 int main()
 {
-    char *args[] = {"ls", "-l", "-a", NULL};
+    // no fork () !
+    char *args[] = {"ls", "-l", "-a" ,"-i", NULL};
     cout << "=====BEFORE========" << endl;
     execvp(args[0], args);
     cout << "======AFTER========" << endl;
