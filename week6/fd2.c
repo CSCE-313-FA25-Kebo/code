@@ -39,10 +39,11 @@ int main()
 
 	// Both the parent and child process run the section below
 
-	//wait(0); // Wait for the child to finish updating the fd
+	wait(0); // Wait for the child to finish updating the fd
 	int fd2 = open("sample.txt", O_RDONLY, 0); // Created after the fork syscall
+	
 	printf("File descriptor (Parent side): %d \n", fd);
-	lseek(fd, -1, SEEK_CUR);
+	lseek(fd, 0, SEEK_SET);
 	read(fd, &c, 1); // In the parent read one character from Minecraft - character ??
 
 

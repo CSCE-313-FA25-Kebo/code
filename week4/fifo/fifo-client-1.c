@@ -16,7 +16,7 @@ const char *FIFO = "/tmp/MY_FIFO"; // Path to the Same FIFO
 
 /* Use the file name to open the FIFO for writing */
 int fifo = open (FIFO, O_WRONLY);
-assert (fifo != -1);
+assert (fifo != -1); // error checking
 
 /* Open the FIFO 6 times, writing an int each time */
 for (int index = 5; index >= 0; index--)
