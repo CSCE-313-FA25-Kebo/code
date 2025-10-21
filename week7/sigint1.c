@@ -14,12 +14,12 @@ int main()
 {
     // Option 1: Handle the signal
     // Define what to do when a signal is received - sighandler is the disposition when CTRL-C is received.
-    signal(SIGINT, sighandler); // VERSION 1
+    //signal(SIGINT, sighandler); // VERSION 1
     //signal(SIGCONT, sighandler); // VERSION 1
-    //signal(SIGUSR1, sighandler); // VERSION 1
+   // signal(SIGUSR1, sighandler); // VERSION 1
 
     // Option 2: ignore the signal
-    //signal(SIGINT, SIG_IGN); // If a SIGINT is captured ignore it
+    signal(SIGINT, SIG_IGN); // If a SIGINT is captured ignore it
 
     // Option 3: Use the default behavior
     
